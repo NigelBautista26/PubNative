@@ -9,8 +9,8 @@ describe("Test The Application...", () => {
     it("Request an advertisment...", () => {
         adUnits.goToAdSizes()
         adSizes.requestAd()
-        // adSizes.requestedAdvertisment.isDisplayed() This assertion works as well but you cant see the ad because its to fast...
-        expect(adSizes.requestedAdvertisment.getText()).to.include('')
+        // adSizes.requestedAdvertisment.isDisplayed() // This assertion works as well to check the generated ad is displayed...
+        expect(adSizes.requestedAdvertisment.getText()).to.equal('') // Assertion to check that the generated ad is displayed...
 
     })
     afterEach(() => { 
